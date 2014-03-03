@@ -1,0 +1,41 @@
+
+<HTML>
+<HEAD>
+<TITLE>ANUNCIOS</TITLE>
+
+<script language="javascript">
+
+var imagenes=new Array("Images/sunbannA.gif","Images/TRABANND.GIF","Images/GLOBE.GIF")
+var direcciones=new Array("http://www.as.com","http://www.marca.com","http://www.google.com")
+var contador=0;
+var imgtot=imagenes.length; //Numero total de imagenes
+
+function rotacion(){
+	
+	if (document.images){
+		contador++;
+	
+		
+		if (contador==imgtot){
+			contador=0;
+		}
+		
+		document.anuncio.src=imagenes[contador];
+		direc.href=direcciones[contador];
+		setTimeout("rotacion()",1000);
+	}
+}
+
+</script>
+
+</HEAD>
+<BODY onLoad="rotacion()">
+
+<center>
+<a href="" name="direc">
+    <IMG alt="" name="anuncio" src="Images/sunbannA.gif" height="80" width="750">
+</a>
+</center>
+
+</BODY>
+</HTML>
